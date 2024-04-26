@@ -1075,7 +1075,7 @@ void wifi_manager( void * pvParameters ){
 				break;
 
 			case WM_EVENT_STA_DISCONNECTED:
-				;wifi_event_sta_disconnected_t* wifi_event_sta_disconnected = (wifi_event_sta_disconnected_t*)msg.param;
+				wifi_event_sta_disconnected_t* wifi_event_sta_disconnected = (wifi_event_sta_disconnected_t*)msg.param;
 				ESP_LOGI(TAG, "MESSAGE: EVENT_STA_DISCONNECTED with Reason code: %d", wifi_event_sta_disconnected->reason);
 
 				/* this even can be posted in numerous different conditions
