@@ -1,4 +1,9 @@
-if(IDF_VERSION_MAJOR GREATER_EQUAL 4)
+if(IDF_VERSION_MAJOR GREATER_EQUAL 5)
+    idf_component_register(SRC_DIRS src
+        REQUIRES log nvs_flash mdns wpa_supplicant lwip esp_http_server esp_wifi
+        INCLUDE_DIRS src
+        EMBED_FILES src/style.css src/code.js src/index.html)
+elseif(IDF_VERSION_MAJOR GREATER_EQUAL 4)
     idf_component_register(SRC_DIRS src
         REQUIRES log nvs_flash mdns wpa_supplicant lwip esp_http_server
         INCLUDE_DIRS src
