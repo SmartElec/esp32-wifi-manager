@@ -34,6 +34,9 @@ Contains the freeRTOS task and all necessary support
 
 #include <stdbool.h>
 
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5, 1, 0)
+#include "esp_wifi_types.h"
+#endif
 
 #ifdef __cplusplus
 extern "C" {
